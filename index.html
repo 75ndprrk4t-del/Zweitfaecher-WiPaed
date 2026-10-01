@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zweitfächer Wirtschaftspädagogik</title>
+
+  <style>
+    :root {
+      --uni-blue: #244f73;
+      --uni-blue-dark: #17374f;
+      --uni-gold: #e6b83f;
+      --text: #242424;
+      --muted: #666666;
+      --border: #d7dde2;
+      --surface: #ffffff;
+      --surface-hover: #f5f8fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+    }
+
+    body {
+      padding: 4px;
+    }
+
+    .subject-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .subject-card {
+      position: relative;
+      min-height: 112px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 18px 46px 18px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 5px solid var(--uni-blue);
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 1px 3px rgba(0,0,0,.05);
+      transition: transform .15s ease, box-shadow .15s ease,
+                  background-color .15s ease, border-color .15s ease;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-2px);
+      background: var(--surface-hover);
+      border-color: #bfcbd4;
+      box-shadow: 0 4px 12px rgba(0,0,0,.10);
+    }
+
+    .subject-card:focus-visible {
+      outline: 3px solid #111;
+      outline-offset: 3px;
+    }
+
+    .subject-name {
+      font-size: 1.02rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .subject-note {
+      margin-top: 7px;
+      font-size: .78rem;
+      line-height: 1.25;
+      color: var(--muted);
+    }
+
+    .arrow {
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--uni-blue);
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+
+    .new-badge {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 7px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid #ead486;
+      background: #fff7da;
+      color: #5e4a00;
+      font-size: .7rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    /* Das Zertifikatsprogramm ist bewusst genauso groß wie alle Zweitfächer. */
+    .certificate {
+      border-top-color: var(--uni-gold);
+    }
+
+    .certificate .arrow {
+      color: #846800;
+    }
+
+    /* Tablet */
+    @media (max-width: 760px) {
+      .subject-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Smartphone */
+    @media (max-width: 500px) {
+      .subject-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .subject-card {
+        min-height: 88px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .subject-card {
+        transition: none;
+      }
+
+      .subject-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+  ================================================================
+  WICHTIG FÜR DIE LINKS
+  ================================================================
+  Die href-Werte unten sind bewusst leicht auffindbar.
+
+  Sobald die TYPO3-Seite aktualisiert ist:
+  1. Öffne die öffentliche Zweitfächer-Seite.
+  2. Klicke oben in der Abschnittsübersicht auf das jeweilige Fach.
+  3. Kopiere die vollständige URL aus der Browser-Adresszeile.
+     Sie endet typischerweise z. B. auf #c123456.
+  4. Ersetze unten beim passenden Fach die URL in href="...".
+
+  target="_parent" sorgt dafür, dass der Link die Uni-Seite öffnet
+  und nicht nur innerhalb dieses eingebetteten Elements.
+  ================================================================
+  -->
+
+  <nav class="subject-grid" aria-label="Zweitfächer der Wirtschaftspädagogik">
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Berufssprache Deutsch</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Deutsch</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Englisch</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Evangelische Theologie</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Französisch</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Geographie</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="new-badge">Neu ab WS 2026/27</span>
+      <span class="subject-name">Italienisch</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Katholische Theologie</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Politik und Gesellschaft</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="new-badge">Neu ab WS 2026/27</span>
+      <span class="subject-name">Spanisch</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Wirtschaftsinformatik</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a class="subject-card certificate" href="https://www.uni-bamberg.de/wipaed/studium/waehrend-des-studiums/zweitfaecher/" target="_parent">
+      <span class="subject-name">Nachholen eines Zweitfachs im Zertifikatsprogramm</span>
+      <span class="subject-note">Informationen zum nachträglichen Erwerb</span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+  </nav>
+
+</body>
+</html>
